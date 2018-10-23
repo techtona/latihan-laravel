@@ -31,7 +31,7 @@
                         <div class="header">
                             <h2>INPUT</h2>
                             @component('components.input',['type' => 'text', 'placeholder'=>'Nama Lengkap'])@endcomponent
-
+                            
                             @component('components.input',['type' => 'text', 'placeholder'=>'Nama Orang Tua'])@endcomponent
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </div>

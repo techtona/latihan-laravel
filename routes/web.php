@@ -15,3 +15,15 @@ Route::get('test',function(){
 Route::get('blank',function(){
 	return view('blank');
 })->name('blank');
+
+/*
+	membuat route baru dengan view baru mengimplementasikan extending layout dan components
+*/
+Route::get('chart',function(){
+	return view('chart');
+})->name('chart');
+
+
+Route::get('test_db','HelloController@test_db')->name('test_db');
+
+Route::get('customer','HelloController@customer');
