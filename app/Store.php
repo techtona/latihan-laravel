@@ -14,4 +14,9 @@ class Store extends Model
 
     //disable created_at and updated_at
     public $timestamps = false;
+
+    public function customer()
+    {
+    	return $this->hasMany(\App\Customer::class,'store_id','store_id');
+    }
 }
