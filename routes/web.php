@@ -27,3 +27,36 @@ Route::get('chart',function(){
 Route::get('test_db','HelloController@test_db')->name('test_db');
 
 Route::get('customer','HelloController@customer');
+
+Route::get('test_store', function(){
+	//select data
+	// $store = \App\Store::limit(10)->get();
+
+	//die and dump
+	// dd($store);
+
+	//insert data
+	$data = [
+		'store_id'	=> 1,
+		'first_name'=> 'Lorem',
+		'last_name'	=> 'Ipsum',
+		'email'		=> 'lorem@ipsum.com',
+		'address_id'	=> 1,
+		'active'	=> '1'
+	];
+
+	\App\Customer::create($data);
+
+	// insert 
+
+	$c = new \App\Customer();
+	$c->store_id = '1';
+	$c->first_name = 'Selamat';
+	$c->last_name = 'Siang';
+	$c->email = 'selamat@siang.com';
+	$c->address_id = '1';
+	$c->active = '1';
+	$c->save();
+
+	return "sukses";
+});
