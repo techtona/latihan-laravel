@@ -13,7 +13,7 @@ class Customer extends Model
     
     //disable created_at and updated_at
     public $timestamps = false;
-
+    //fillable column
     protected $fillable = [
     	'store_id',
 		'first_name', 

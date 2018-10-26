@@ -8,9 +8,9 @@ Route::get('/', function () {
 Route::get('/hello','HelloController@index')->name('hello.index');
 
 // untuk belajar bootstrap 3
-Route::get('test',function(){
-	return view('test');
-})->name('test');
+// Route::get('test',function(){
+// 	return view('test');
+// })->name('test');
 
 Route::get('blank',function(){
 	return view('blank');
@@ -60,3 +60,9 @@ Route::get('test_store', function(){
 
 	return "sukses";
 });
+
+
+Route::get('test_create','TestController@create');
+
+Route::get('test_update/{customer_id}','TestController@update');
+Route::get('test_delete/{customer_id}','TestController@delete');
