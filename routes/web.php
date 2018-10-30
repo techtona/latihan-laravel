@@ -71,3 +71,6 @@ Route::get('test_update/{customer_id}','TestController@update');
 Route::get('test_delete/{customer_id}','TestController@delete');
 
 Route::get('join_store_to_customer','TestController@join_store_to_customer');
+
+
+Route::resource('customer','CustomerController');
