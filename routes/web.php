@@ -61,13 +61,13 @@ Route::get('test_store', function(){
 	return "sukses";
 });
 
-
+//menampilkan customer
+Route::get('test','TestController@index');
+//create customer
 Route::get('test_create','TestController@create');
-
+//update customer
 Route::get('test_update/{customer_id}','TestController@update');
+//delete customer
 Route::get('test_delete/{customer_id}','TestController@delete');
-
-
-
 
 Route::get('join_store_to_customer','TestController@join_store_to_customer');

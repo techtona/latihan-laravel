@@ -8,6 +8,11 @@ use App\Store;
 
 class TestController extends Controller
 {
+	public function index()
+	{
+		return view('blank');
+	}
+
     public function create(Request $request)
     {
     	// dd($request->first_name);
