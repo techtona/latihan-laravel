@@ -73,4 +73,15 @@ Route::get('test_delete/{customer_id}','TestController@delete');
 Route::get('join_store_to_customer','TestController@join_store_to_customer');
 
 
+
 Route::resource('customer','CustomerController');
+	
+	// Route::get('customer','CustomerController@index')->name('customer.index');
+	// Route::get('customer/create','CustomerController@create')->name('customer.create');
+	// Route::post('customer','CustomerController@store')->name('customer.store');
+	// Route::get('customer/{id}/edit','CustomerController@edit')->name('customer.edit');
+	// Route::put('customer/{id}','CustomerController@update')->name('customer.update');
+	
+
+	// Route::get('customer/{id}','CustomerController@show')->name('customer.show');
+	// Route::delete('customer/{id}','CustomerController@destroy')->name('customer.destroy');

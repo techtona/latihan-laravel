@@ -1,7 +1,7 @@
 @extends('layouts.main')
 @section('title','Cusomter')
 @section('content')
-    <a href="" class="btn btn-lg btn-primary"><i class="material-icons">person_add</i>&nbsp; Tambah Customer</a>
+    <a href="{{route('customer.create')}}" class="btn btn-lg btn-primary"><i class="material-icons">person_add</i>&nbsp; Tambah Customer</a>
     <br><br>
 	<div class="row">
 		<div class="col-md-12">
@@ -52,4 +52,8 @@
                     </div>
 		</div>
 	</div>
+@endsection
+
+@section('js')
+    
 @endsection

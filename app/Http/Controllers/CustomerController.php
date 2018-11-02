@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Customer;
+use Session;
 
 class CustomerController extends Controller
 {
@@ -26,7 +27,7 @@ class CustomerController extends Controller
      */
     public function create()
     {
-        //
+        return view('customer.create');
     }
 
     /**
@@ -37,7 +38,7 @@ class CustomerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd($request->all());
     }
 
 
@@ -67,7 +68,7 @@ class CustomerController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Untuk menampilkan modal/pop up konfirmasi hapus data customer
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -92,6 +93,8 @@ class CustomerController extends Controller
     {
         Customer::where('customer_id',$id)->delete();
 
-        return redirect()->back()->with('success','Berhasil menghapus Data');
+        Session::flash('success','Berhasil menghapus data Customer');
+
+        return redirect()->back();
     }
 }

@@ -491,11 +491,20 @@
     <!-- Waves Effect Plugin Js -->
     <script src="{{url('/')}}/admin_bsb/plugins/node-waves/waves.js"></script>
 
+    <!-- notification -->
+    <script src="{{asset('admin_bsb')}}/plugins/bootstrap-notify/bootstrap-notify.js"></script>
+    <script type="text/javascript" src="{{asset('/')}}/js/notify.js"></script>
+
     <!-- Custom Js -->
     <script src="{{url('/')}}/admin_bsb/js/admin.js"></script>
 
     <!-- Demo Js -->
     <script src="{{url('/')}}/admin_bsb/js/demo.js"></script>
+    <script type="text/javascript">
+        @if (session('success'))
+            show_notification("{{session('success')}}");
+        @endif
+    </script>
     @yield('js')
 </body>
 
